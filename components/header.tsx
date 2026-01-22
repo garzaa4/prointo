@@ -21,7 +21,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
        <Link href="/" className="flex items-center">
   <Image
-    src="/logo.PNG"   // cambia si es png o jpg
+    src="/logoesg.png"   
     alt="Prointo"
     width={160}
     height={150}
