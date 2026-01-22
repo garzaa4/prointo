@@ -11,7 +11,6 @@ const sucursales = [
     phone: "+52 222 7059106",
     hours: "Lun - Vie: 8:00 - 18:00 | Sáb: 9:00 - 14:00",
   },
-  
 ]
 
 export default function SucursalesPage() {

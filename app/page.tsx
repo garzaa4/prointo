@@ -37,7 +37,7 @@ export default function HomePage() {
                 href="/catalogo"
                 className="inline-flex px-8 py-3 bg-card text-foreground font-medium rounded-lg border border-border hover:bg-card/90 transition-colors"
               >
-                Descargar Catálogo
+                Descargar Catálogos
               </a>
             </div>
           </div>
