@@ -91,7 +91,7 @@ export default function HomePage() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-foreground">Cobertura Nacional</h3>
-                <p className="mt-2 text-sm text-muted-foreground">Sucursales y envíos a todo el país</p>
+                <p className="mt-2 text-sm text-muted-foreground">Envíos a todo el país</p>
               </div>
             </div>
           </div>

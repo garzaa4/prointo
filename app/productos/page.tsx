@@ -27,7 +27,7 @@ export default async function ProductosPage({ searchParams }: PageProps) {
               Nuestros Productos
             </h1>
             <p className="mt-2 text-muted-foreground">
-              Explora toda nuestra colección de diseño exclusivo
+              Explora nuestra amplia variedad de equipos de protección industrial
             </p>
           </div>
         </section>

@@ -10,7 +10,7 @@ const _inter = Inter({ subsets: ["latin"], variable: '--font-sans' });
 export const metadata: Metadata = {
   title: 'Prointo | Todo en Protección Industrial',
   description: 'Equipos de protección personal e industrial: cascos, botas, arneses, lentes, mascarillas y más. Solicita tu cotización sin compromiso.',
-  generator: 'v0.app',
+  generator: 'Next.js',
   icons: {
     icon: [
       {
