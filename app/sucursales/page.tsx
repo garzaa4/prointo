@@ -5,36 +5,13 @@ import { MapPin, Phone, Clock } from "lucide-react"
 const sucursales = [
   {
     id: 1,
-    name: "Matriz CDMX",
-    address: "Av. Industrial 456, Zona Industrial Vallejo",
-    city: "Ciudad de México",
-    phone: "+52 55 1234 5678",
+    name: "Matriz Puebla",
+    address: "Boulevard San Felipe 47 B, Col. Villa Posadas, Puebla, Pue.",
+    city: "Puebla, Pue.",
+    phone: "+52 222 7059106",
     hours: "Lun - Vie: 8:00 - 18:00 | Sáb: 9:00 - 14:00",
   },
-  {
-    id: 2,
-    name: "Sucursal Monterrey",
-    address: "Av. Ruiz Cortines 1234, Parque Industrial",
-    city: "Monterrey, N.L.",
-    phone: "+52 81 2345 6789",
-    hours: "Lun - Vie: 8:00 - 18:00 | Sáb: 9:00 - 14:00",
-  },
-  {
-    id: 3,
-    name: "Sucursal Guadalajara",
-    address: "Blvd. Tonalá 789, Zona Industrial",
-    city: "Guadalajara, Jal.",
-    phone: "+52 33 3456 7890",
-    hours: "Lun - Vie: 8:00 - 18:00 | Sáb: 9:00 - 14:00",
-  },
-  {
-    id: 4,
-    name: "Sucursal Querétaro",
-    address: "Av. de la Industria 321, Parque Industrial Benito Juárez",
-    city: "Querétaro, Qro.",
-    phone: "+52 442 123 4567",
-    hours: "Lun - Vie: 8:00 - 18:00 | Sáb: 9:00 - 14:00",
-  },
+  
 ]
 
 export default function SucursalesPage() {
