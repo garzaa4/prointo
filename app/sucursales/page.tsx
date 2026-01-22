@@ -61,7 +61,7 @@ export default function SucursalesPage() {
                   </div>
 
                   <a
-                    href={`https://maps.google.com/?q=${encodeURIComponent(sucursal.address + ", " + sucursal.city)}`}
+                    href={`https://maps.app.goo.gl/3k9qgQhgaLBR7pz57`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex mt-6 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
