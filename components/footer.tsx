@@ -9,10 +9,10 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center">
               <Image
-                src="/logesg.png"
+                src="/logo.png"
                 alt="Prointo"
-                width={150}
-                height={150}
+                width={200}
+                height={200}
                 className="object-contain"
               />
             </Link>
