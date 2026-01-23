@@ -35,6 +35,20 @@ export function ProductGrid({ products }: ProductGridProps) {
               <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
                 {product.description}
               </p>
+              
+              {/* Mostrar colores si el producto tiene variaciones */}
+              {product.colors && product.colors.length > 0 && (
+                <div className="mt-3 flex gap-2">
+                  {product.colors.map((color, index) => (
+                    <div
+                      key={index}
+                      className="w-6 h-6 rounded-full border-2 border-gray-300 hover:border-primary transition-colors cursor-pointer"
+                      style={{ backgroundColor: color }}
+                      title={color}
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           </article>
         </Link>

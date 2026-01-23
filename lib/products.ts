@@ -8,6 +8,7 @@ export interface Product {
   features: string[]
   precio?: number
   discount?: number
+  colors?: string[] // Array de códigos hex de colores
 }
 
 export const products: Product[] = [
@@ -76,7 +77,8 @@ export const products: Product[] = [
     longDescription: "Chaleco de seguridad de alta visibilidad clase 2 con cintas reflectantes 3M. Fabricado en malla de poliéster transpirable. Cuenta con múltiples bolsillos y cierre frontal con velcro.",
     category: "chalecos",
     image: "https://e7.pngegg.com/pngimages/714/920/png-clipart-high-visibility-clothing-waistcoat-armilla-reflectora-safety-others-miscellaneous-white.png",
-    features: ["Clase 2 ANSI", "Cintas 3M reflectantes", "Malla transpirable", "Múltiples bolsillos"]
+    features: ["Clase 2 ANSI", "Cintas 3M reflectantes", "Malla transpirable", "Múltiples bolsillos"],
+    colors: ["#CCFF00", "#0047AB", "#FF6B35", "#FF0000", "#00AA00"]
   },
   {
     id: "tapones-auditivos",
