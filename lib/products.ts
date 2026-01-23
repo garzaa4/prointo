@@ -21,6 +21,7 @@ export const products: Product[] = [
     image: "https://png.pngtree.com/png-clipart/20250218/original/pngtree-safety-helmets-png-image_20457928.png",
     features: ["Certificación ANSI/ISEA Z89.1", "Suspensión de 4 puntos", "Ranuras para accesorios", "Resistente a impactos"],
     precio : 75.00,
+    colors: ["#FFD700", "#FF4500", "#1E90FF", "#32CD32"],
     discount: 15
   },
   {
@@ -78,6 +79,7 @@ export const products: Product[] = [
     category: "chalecos",
     image: "https://e7.pngegg.com/pngimages/714/920/png-clipart-high-visibility-clothing-waistcoat-armilla-reflectora-safety-others-miscellaneous-white.png",
     features: ["Clase 2 ANSI", "Cintas 3M reflectantes", "Malla transpirable", "Múltiples bolsillos"],
+    precio: 28.97,
     colors: ["#CCFF00", "#0047AB", "#FF6B35", "#FF0000", "#00AA00"]
   },
   {

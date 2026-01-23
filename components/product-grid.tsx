@@ -49,6 +49,13 @@ export function ProductGrid({ products }: ProductGridProps) {
                   ))}
                 </div>
               )}
+              
+              {/* Mostrar precio */}
+              {product.precio && (
+                <div className="mt-4 text-lg font-bold text-foreground">
+                  ${product.precio.toFixed(2)}
+                </div>
+              )}
             </div>
           </article>
         </Link>
