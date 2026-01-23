@@ -6,6 +6,7 @@ export interface Product {
   category: string
   image: string
   features: string[]
+  precio?: number
   discount?: number
 }
 
@@ -18,6 +19,7 @@ export const products: Product[] = [
     category: "cascos",
     image: "https://png.pngtree.com/png-clipart/20250218/original/pngtree-safety-helmets-png-image_20457928.png",
     features: ["Certificación ANSI/ISEA Z89.1", "Suspensión de 4 puntos", "Ranuras para accesorios", "Resistente a impactos"],
+    precio : 75.00,
     discount: 15
   },
   {

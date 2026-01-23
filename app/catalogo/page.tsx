@@ -12,10 +12,10 @@ export default function CatalogoPage() {
         {/* Page Header */}
         <section className="bg-secondary py-12 lg:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h1 className="font-serif text-3xl sm:text-4xl font-bold text-foreground">
+            <h1 className="font-serif text-3xl sm:text-4xl font-bold text-white">
               Catálogo Digital
             </h1>
-            <p className="mt-2 text-muted-foreground">
+            <p className="mt-2 text-white/80">
               Descarga nuestro catálogo completo con todos los productos y especificaciones
             </p>
           </div>
