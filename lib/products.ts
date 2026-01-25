@@ -14,8 +14,8 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    id: "casco-seguridad-amarillo",
-    name: "Casco de Seguridad Industrial",
+    id: "casco-mundial",
+    name: "CASCO DE SEGURIDAD MUNDIAL",
     description: "Casco tipo I clase E con suspensión de 4 puntos",
     longDescription: "El casco Mundial está fabricado en modernos sistemas de inyección de plásticos termófijos, está diseñado para proveer protección, balance y confort al mismo tiempo que provee protección de pequeños objetos que puedan caer golpeando la parte superior del casco. Además de distribuir la transmisión de fuerza de los impactos, cuenta con sudadera absorbente, lavable y reemplazable, el mecanismo de ajuste por matraca o intervalos hace del casco Mundial confortable para el usuario. Esta aprobado para la protección de la cabeza contra peligros de impacto, penetración, combustión y descargas eléctricas..",
     category: "cascos",
