@@ -2,29 +2,30 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image, { type StaticImageData } from "next/image";
 import { type FC, useMemo, useRef } from "react";
 import { twJoin, twMerge } from "tailwind-merge";
 
-// IMÁGENES
+// IMÁGENES DESDE /public
 import LogoDermacare from "@/public/Logo-Dermacare.png";
 import LogoJYRSANegro from "@/public/Logo-JYRSA-negro-03.jpg";
 import LogoMRSeguridad from "@/public/MR_Seguridad_logo-300x132.png";
 
-gsap.registerPlugin(useGSAP);
+// Registrar plugins GSAP
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 type Props = {
   isReversed?: boolean;
   className?: string;
 };
 
+// ⚠️ SOLO UNA VEZ (no duplicar aquí)
 const LOGOS: StaticImageData[] = [
   LogoDermacare,
   LogoJYRSANegro,
   LogoMRSeguridad,
 ];
-
-const ELEMENTS = [...LOGOS, ...LOGOS];
 
 const CarruselLogo: FC<Props> = ({ isReversed = false, className }) => {
   const movingContainer = useRef<HTMLDivElement | null>(null);
@@ -40,7 +41,10 @@ const CarruselLogo: FC<Props> = ({ isReversed = false, className }) => {
       });
 
       timeline.current = gsap
-        .timeline({ defaults: { ease: "none", repeat: -1 } })
+        .timeline({
+          repeat: -1,
+          defaults: { ease: "none" },
+        })
         .to(movingContainer.current, {
           xPercent: isReversed ? 0 : -50,
           duration: 20,
@@ -53,8 +57,8 @@ const CarruselLogo: FC<Props> = ({ isReversed = false, className }) => {
     if (!timeline.current) return;
     timelineTimeScaleTween.current?.kill();
     timelineTimeScaleTween.current = gsap.to(timeline.current, {
-      timeScale: 0.25,
-      duration: 0.4,
+      timeScale: 0.3,
+      duration: 0.3,
     });
   };
 
@@ -70,15 +74,17 @@ const CarruselLogo: FC<Props> = ({ isReversed = false, className }) => {
   const list = useMemo(
     () => (
       <div className="flex w-fit items-center gap-10">
-        {ELEMENTS.map((src, index) => (
+        {LOGOS.map((src, index) => (
           <div
             key={index}
-            className="relative flex shrink-0 items-center justify-center"
+            className={twJoin(
+              "relative flex shrink-0 items-center justify-center"
+            )}
+            style={{ width: src.width, height: src.height }}
           >
             <Image
               src={src}
               alt="logo"
-              width={120}
               height={40}
               className="object-contain"
             />
@@ -91,12 +97,12 @@ const CarruselLogo: FC<Props> = ({ isReversed = false, className }) => {
 
   return (
     <div
-      className={twMerge("max-w-full select-none overflow-hidden", className)}
+      className={twMerge("max-w-full overflow-hidden select-none", className)}
       onPointerEnter={onPointerEnter}
       onPointerLeave={onPointerLeave}
       style={{
         maskImage:
-          "linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%)",
+          "linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)",
       }}
     >
       <div ref={movingContainer} className="flex w-fit">
