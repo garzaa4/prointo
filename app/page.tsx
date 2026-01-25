@@ -99,7 +99,7 @@ export default function HomePage() {
           </div>
         </section>
         {/* Logos Carousel Section */}
-        <section className="py-12 lg:py-16 bg-background">
+        <section className="py-12 lg:py-8 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <CarruselLogo />
           </div>

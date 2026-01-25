@@ -7,7 +7,7 @@ import Image, { type StaticImageData } from "next/image";
 import { type FC, useMemo, useRef } from "react";
 import { twJoin, twMerge } from "tailwind-merge";
 
-// 🔹 TUS IMÁGENES DESDE /public
+// TUS IMÁGENES
 import LogoDermacare from "@/public/Logo-Dermacare.png";
 import LogoJYRSANegro from "@/public/Logo-JYRSA-negro-03.jpg";
 import LogoMRSeguridad from "@/public/MR_Seguridad_logo-300x132.png";
@@ -19,14 +19,12 @@ type Props = {
   className?: string;
 };
 
-// 🔹 SOLO CAMBIAMOS LOS ICONOS
 const TECHNOLOGY_ICONS: StaticImageData[] = [
   LogoDermacare,
   LogoJYRSANegro,
   LogoMRSeguridad,
 ];
 
-// 🔹 SE DEJA IGUAL
 const ELEMENTS = [...TECHNOLOGY_ICONS, ...TECHNOLOGY_ICONS];
 
 const Marquee: FC<Props> = ({ isReversed = false, className }) => {
@@ -57,8 +55,8 @@ const Marquee: FC<Props> = ({ isReversed = false, className }) => {
     if (!timeline.current) return;
     timelineTimeScaleTween.current?.kill();
     timelineTimeScaleTween.current = gsap.to(timeline.current, {
-      timeScale: 0.25,
-      duration: 0.4,
+      timeScale: 0.3,
+      duration: 0.3,
     });
   };
 
@@ -80,16 +78,15 @@ const Marquee: FC<Props> = ({ isReversed = false, className }) => {
             <div
               key={index}
               className={twJoin(
-                "relative flex shrink-0 items-center justify-center",
+                "relative flex shrink-0 items-center justify-center w-32 h-12",
                 isLast && "mr-10"
               )}
-              style={{ height: src.height, width: src.width }}
             >
               <Image
                 src={src}
                 alt="logo"
-                height={40}
-                className="object-contain"
+                height={32}
+                className="object-contain max-h-10"
               />
             </div>
           );
@@ -101,7 +98,10 @@ const Marquee: FC<Props> = ({ isReversed = false, className }) => {
 
   return (
     <div
-      className={twMerge("max-w-full select-none overflow-hidden", className)}
+      className={twMerge(
+        "max-w-full select-none overflow-hidden h-16 flex items-center",
+        className
+      )}
       onPointerEnter={onPointerEnter}
       onPointerLeave={onPointerLeave}
       style={{
