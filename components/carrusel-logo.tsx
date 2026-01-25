@@ -2,21 +2,16 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image, { type StaticImageData } from "next/image";
 import { type FC, useMemo, useRef } from "react";
 import { twJoin, twMerge } from "tailwind-merge";
 
-// IMÁGENES DESDE /public
+// IMÁGENES
 import LogoDermacare from "@/public/Logo-Dermacare.png";
 import LogoJYRSANegro from "@/public/Logo-JYRSA-negro-03.jpg";
 import LogoMRSeguridad from "@/public/MR_Seguridad_logo-300x132.png";
-import Arnes from "@/public/arnes.png";
-import Casco from "@/public/casco.png";
-import Guantes from "@/public/guentes.webp";
 
-// registrar plugins
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(useGSAP);
 
 type Props = {
   isReversed?: boolean;
@@ -27,12 +22,8 @@ const LOGOS: StaticImageData[] = [
   LogoDermacare,
   LogoJYRSANegro,
   LogoMRSeguridad,
-  Arnes,
-  Casco,
-  Guantes,
 ];
 
-// duplicamos para efecto infinito
 const ELEMENTS = [...LOGOS, ...LOGOS];
 
 const CarruselLogo: FC<Props> = ({ isReversed = false, className }) => {
@@ -49,14 +40,11 @@ const CarruselLogo: FC<Props> = ({ isReversed = false, className }) => {
       });
 
       timeline.current = gsap
-        .timeline({
-          defaults: { ease: "none", repeat: -1 },
-        })
+        .timeline({ defaults: { ease: "none", repeat: -1 } })
         .to(movingContainer.current, {
           xPercent: isReversed ? 0 : -50,
           duration: 20,
-        })
-        .set(movingContainer.current, { xPercent: 0 });
+        });
     },
     { dependencies: [isReversed] }
   );
@@ -85,14 +73,12 @@ const CarruselLogo: FC<Props> = ({ isReversed = false, className }) => {
         {ELEMENTS.map((src, index) => (
           <div
             key={index}
-            className={twJoin(
-              "relative flex shrink-0 items-center justify-center"
-            )}
-            style={{ width: src.width, height: src.height }}
+            className="relative flex shrink-0 items-center justify-center"
           >
             <Image
               src={src}
               alt="logo"
+              width={120}
               height={40}
               className="object-contain"
             />
