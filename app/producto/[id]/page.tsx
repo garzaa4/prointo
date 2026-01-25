@@ -98,6 +98,21 @@ export default async function ProductPage({ params }: PageProps) {
                 </ul>
               </div>
 
+              {/* Normatividad */}
+              <div className="mt-8">
+                <h3 className="font-semibold text-foreground mb-4">Normatividad</h3>
+                <ul className="space-y-3">
+                  {product.normatividad?.map((norma, index) => (
+                    <li key={index} className="flex items-center gap-3 text-muted-foreground">
+                      <span className="flex-shrink-0 h-5 w-5 rounded-full bg-accent/10 flex items-center justify-center">
+                        <Check className="h-3 w-3 text-accent" />
+                      </span>
+                      {norma}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               {/* Quote Button */}
               <div className="mt-10 pt-8 border-t border-border">
                 <p className="text-sm text-muted-foreground mb-4">

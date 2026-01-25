@@ -6,6 +6,7 @@ export interface Product {
   category: string
   image: string
   features: string[]
+  normatividad?: string[]
   precio?: number
   discount?: number
   colors?: string[] // Array de códigos hex de colores
@@ -16,10 +17,11 @@ export const products: Product[] = [
     id: "casco-seguridad-amarillo",
     name: "Casco de Seguridad Industrial",
     description: "Casco tipo I clase E con suspensión de 4 puntos",
-    longDescription: "Casco de seguridad industrial fabricado en polietileno de alta densidad, diseñado para proteger contra impactos y penetración. Cuenta con suspensión ajustable de 4 puntos para mayor comodidad durante largas jornadas de trabajo.",
+    longDescription: "El casco Mundial está fabricado en modernos sistemas de inyección de plásticos termófijos, está diseñado para proveer protección, balance y confort al mismo tiempo que provee protección de pequeños objetos que puedan caer golpeando la parte superior del casco. Además de distribuir la transmisión de fuerza de los impactos, cuenta con sudadera absorbente, lavable y reemplazable, el mecanismo de ajuste por matraca o intervalos hace del casco Mundial confortable para el usuario. Esta aprobado para la protección de la cabeza contra peligros de impacto, penetración, combustión y descargas eléctricas..",
     category: "cascos",
     image: "https://png.pngtree.com/png-clipart/20250218/original/pngtree-safety-helmets-png-image_20457928.png",
-    features: ["Certificación ANSI/ISEA Z89.1", "Suspensión de 4 puntos", "Ranuras para accesorios", "Resistente a impactos"],
+    features: ["Suspensión de 4 puntos", "Ranuras para accesorios", "Resistente a impactos"],
+    normatividad : ["-NOM-115-STPS-2009", "-NMX-S-055-SCFI-2002", "-PEMEX-EST-SS-058-2018","-NRF-012-CFE-2010."],
     precio : 75.00,
     colors: ["#FFD700", "#FF4500", "#1E90FF", "#32CD32"],
     discount: 15
