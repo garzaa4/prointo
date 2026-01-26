@@ -9,7 +9,7 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo.png"
+                src="/N_Slogan.svg"
                 alt="Prointo"
                 width={200}
                 height={200}
