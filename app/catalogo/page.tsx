@@ -20,7 +20,7 @@ export default function CatalogoPage() {
             </p>
           </div>
         </section>
-
+            
         {/* Catalog Options */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">

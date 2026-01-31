@@ -11,6 +11,7 @@ export function Footer() {
               <Image
                 src="/N_Slogan.svg"
                 alt="Prointo"
+                
                 width={200}
                 height={200}
                 className="object-contain"
